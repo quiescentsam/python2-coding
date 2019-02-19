@@ -12,14 +12,13 @@ Subject: Hi there
 
 This message is sent from Python."""
 
-context = ssl.create_default_context()
-with smtplib.SMTP(smtp_server, port) as server:
-    server.ehlo()  # Can be omitted
-    server.starttls(context=context)
-    server.ehlo()  # Can be omitted
-    server.login(sender_email, password)
-    server.sendmail(sender_email, receiver_email, message)
-    server.quit()
+server = smtplib.SMTP(smtp_server, port)
+server.ehlo()  # Can be omitted
+server.starttls()
+server.ehlo()  # Can be omitted
+server.login(sender_email, password)
+server.sendmail(sender_email, receiver_email, message)
+
 
 # context = ssl.create_default_context()
 # with smtplib.SMTP_SSL(smtp_server, ssl_port, context=context) as server:
