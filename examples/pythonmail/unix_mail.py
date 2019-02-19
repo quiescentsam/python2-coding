@@ -2,7 +2,7 @@ import smtplib
 
 SERVER = "localhost"
 
-FROM = "ssameerahmad@cloudera.com"
+FROM = "sameerahmad@cloudera.com"
 TO = ["sameerahmad@cloudera.com", "chill.sameer@gmail.com"]   # must be a list
 
 SUBJECT = "Hello!"
