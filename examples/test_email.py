@@ -19,6 +19,7 @@ with smtplib.SMTP(smtp_server, port) as server:
     server.ehlo()  # Can be omitted
     server.login(sender_email, password)
     server.sendmail(sender_email, receiver_email, message)
+    server.quit()
 
 # context = ssl.create_default_context()
 # with smtplib.SMTP_SSL(smtp_server, ssl_port, context=context) as server:
